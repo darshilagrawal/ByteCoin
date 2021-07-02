@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		ADA8AC152329367300626376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA8AC132329367300626376 /* LaunchScreen.storyboard */; };
 		ADA8AC202329398300626376 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AC1F2329398300626376 /* CoinManager.swift */; };
 		D525D8FC24BF264A0028EEC0 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D525D8FB24BF264A0028EEC0 /* CoinData.swift */; };
+		D5B4482E268F8BFC00C6BBD3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5B4482D268F8BFC00C6BBD3 /* Lottie */; };
+		D5B44830268F8D8D00C6BBD3 /* 8352-bitcoin.json in Resources */ = {isa = PBXBuildFile; fileRef = D5B4482F268F8D8C00C6BBD3 /* 8352-bitcoin.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		ADA8AC162329367300626376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA8AC1F2329398300626376 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		D525D8FB24BF264A0028EEC0 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		D5B4482F268F8D8C00C6BBD3 /* 8352-bitcoin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8352-bitcoin.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B4482E268F8BFC00C6BBD3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +72,7 @@
 				ADA8AC112329367300626376 /* Assets.xcassets */,
 				ADA8AC132329367300626376 /* LaunchScreen.storyboard */,
 				ADA8AC162329367300626376 /* Info.plist */,
+				D5B4482F268F8D8C00C6BBD3 /* 8352-bitcoin.json */,
 			);
 			path = ByteCoin;
 			sourceTree = "<group>";
@@ -113,6 +118,9 @@
 			dependencies = (
 			);
 			name = ByteCoin;
+			packageProductDependencies = (
+				D5B4482D268F8BFC00C6BBD3 /* Lottie */,
+			);
 			productName = ByteCoin;
 			productReference = ADA8AC052329367100626376 /* ByteCoin.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +149,9 @@
 				Base,
 			);
 			mainGroup = ADA8ABFC2329367100626376;
+			packageReferences = (
+				D5B4482C268F8BFC00C6BBD3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = ADA8AC062329367100626376 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B44830268F8D8D00C6BBD3 /* 8352-bitcoin.json in Resources */,
 				ADA8AC152329367300626376 /* LaunchScreen.storyboard in Resources */,
 				ADA8AC122329367300626376 /* Assets.xcassets in Resources */,
 				ADA8AC102329367100626376 /* Main.storyboard in Resources */,
@@ -372,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5B4482C268F8BFC00C6BBD3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5B4482D268F8BFC00C6BBD3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5B4482C268F8BFC00C6BBD3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADA8ABFD2329367100626376 /* Project object */;
 }

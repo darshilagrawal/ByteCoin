@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
     
@@ -8,12 +9,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    @IBOutlet weak var animationView: AnimationView!
+    
     var coinManager = CoinManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.dataSource=self
         currencyPicker.delegate=self
         coinManager.delegate=self
+        animationView.animation = Animation.named("8352-bitcoin")
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.8
+        animationView.play()
+        animationView.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
 }
