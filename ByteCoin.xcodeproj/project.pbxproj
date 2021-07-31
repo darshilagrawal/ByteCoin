@@ -64,6 +64,7 @@
 		ADA8AC072329367100626376 /* ByteCoin */ = {
 			isa = PBXGroup;
 			children = (
+				D5D6692026A9E54E0079280A /* View Model */,
 				ADA8AC082329367100626376 /* AppDelegate.swift */,
 				ADA8AC0A2329367100626376 /* SceneDelegate.swift */,
 				ADA8AC1E2329370F00626376 /* Model */,
@@ -96,10 +97,17 @@
 		ADA8AC1E2329370F00626376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADA8AC1F2329398300626376 /* CoinManager.swift */,
 				D525D8FB24BF264A0028EEC0 /* CoinData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D5D6692026A9E54E0079280A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADA8AC1F2329398300626376 /* CoinManager.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

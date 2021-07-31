@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -15,20 +15,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ByteCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5TP-yw-RBT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct2-jk-pgH">
-                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="896" width="834" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="S7z-Rh-fJa"/>
                                 </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WWW-oe-lHd">
-                                <rect key="frame" x="0.0" y="54" width="414" height="165"/>
+                                <rect key="frame" x="0.0" y="10" width="834" height="165"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ByteCoin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-79-vXn">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="60"/>
+                                        <rect key="frame" x="10" y="0.0" width="814" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="bMu-oK-jI2"/>
                                             <constraint firstAttribute="height" constant="60" id="szc-9z-u5Q"/>
@@ -38,7 +38,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y91-qX-d96" userLabel="Coin View">
-                                        <rect key="frame" x="20" y="85" width="374" height="80"/>
+                                        <rect key="frame" x="230" y="85" width="374" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ocx-jo-FtC">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="80"/>
@@ -89,7 +89,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1px-Vt-3Xd" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="219" width="414" height="427"/>
+                                <rect key="frame" x="0.0" y="175" width="834" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>

@@ -27,21 +27,21 @@ class ViewController: UIViewController {
     }
 }
 //MARK: - UIPickerViewDelegate
-    extension ViewController :UIPickerViewDelegate{
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return coinManager.currencyArray[row]
-//    }
+extension ViewController :UIPickerViewDelegate{
+    //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    //        return coinManager.currencyArray[row]
+    //    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedCurrency=coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurrency)
     }
-//       Function to set the Text Color of PickerView to White
-        
-        func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-            return NSAttributedString(string: coinManager.currencyArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        }
-
+    //       Function to set the Text Color of PickerView to White
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: coinManager.currencyArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+    }
+    
 }
 //MARK: - UIPickerViewDataSource
 extension ViewController:UIPickerViewDataSource{
