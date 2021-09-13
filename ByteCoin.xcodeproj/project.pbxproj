@@ -17,6 +17,8 @@
 		D525D8FC24BF264A0028EEC0 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D525D8FB24BF264A0028EEC0 /* CoinData.swift */; };
 		D5B4482E268F8BFC00C6BBD3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5B4482D268F8BFC00C6BBD3 /* Lottie */; };
 		D5B44830268F8D8D00C6BBD3 /* 8352-bitcoin.json in Resources */ = {isa = PBXBuildFile; fileRef = D5B4482F268F8D8C00C6BBD3 /* 8352-bitcoin.json */; };
+		D5BB542E26EFA7D9007A37A6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB542D26EFA7D9007A37A6 /* LoadingView.swift */; };
+		D5BB543026EFA85A007A37A6 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5BB542F26EFA85A007A37A6 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		ADA8AC1F2329398300626376 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		D525D8FB24BF264A0028EEC0 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		D5B4482F268F8D8C00C6BBD3 /* 8352-bitcoin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8352-bitcoin.json"; sourceTree = "<group>"; };
+		D5BB542D26EFA7D9007A37A6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D5BB542F26EFA85A007A37A6 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				ADA8AC0E2329367100626376 /* Main.storyboard */,
+				D5BB542D26EFA7D9007A37A6 /* LoadingView.swift */,
+				D5BB542F26EFA85A007A37A6 /* LoadingView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 				ADA8AC152329367300626376 /* LaunchScreen.storyboard in Resources */,
 				ADA8AC122329367300626376 /* Assets.xcassets in Resources */,
 				ADA8AC102329367100626376 /* Main.storyboard in Resources */,
+				D5BB543026EFA85A007A37A6 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +200,7 @@
 				D525D8FC24BF264A0028EEC0 /* CoinData.swift in Sources */,
 				ADA8AC092329367100626376 /* AppDelegate.swift in Sources */,
 				ADA8AC0B2329367100626376 /* SceneDelegate.swift in Sources */,
+				D5BB542E26EFA7D9007A37A6 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,18 +16,28 @@ struct CoinManager {
 
     func getCoinPrice(for currency :String){
         let urlString = "\(baseURL)/\(currency)?apikey=\(apiKey)"
+        DispatchQueue.main.async {
+            LoadingView.instance.show()
+        }
         
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, urlResponse, error) in
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
+                    DispatchQueue.main.async {
+                        LoadingView.instance.hide()
+                    }
                     return
                 }
                 if let safeData = data{
                     
                     if let bitcoinPrice = self.parseJSON(data: safeData){
                     let priceString = String(format: "%.2f", bitcoinPrice)
+                        DispatchQueue.main.async {
+                            LoadingView.instance.hide()
+                        }
+                    
                     self.delegate?.didUpdatePrice(price: priceString, currency: currency)
                     }
                     

@@ -17,11 +17,12 @@ class ViewController: UIViewController {
         currencyPicker.dataSource=self
         currencyPicker.delegate=self
         coinManager.delegate=self
-        animationView.animation = Animation.named("8352-bitcoin")
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.animationSpeed = 0.8
-        animationView.play()
+        animationView.isHidden = true
+        //        animationView.animation = Animation.named("8352-bitcoin")
+        //        animationView.contentMode = .scaleAspectFit
+        //        animationView.loopMode = .loop
+        //        animationView.animationSpeed = 0.8
+        //        animationView.play()
         animationView.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
@@ -66,7 +67,12 @@ extension ViewController : CoinManagerDelegate{
     }
     
     func didFailWithError(error: Error) {
-        print(error)
+        let alert = UIAlertController(title: "Please Try Again", message: "Connectivity Issues", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+        alert.addAction(action)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
