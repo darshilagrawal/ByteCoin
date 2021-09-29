@@ -27,8 +27,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
+
 //MARK: - UIPickerViewDelegate
-extension ViewController :UIPickerViewDelegate{
+extension ViewController :UIPickerViewDelegate {
     //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     //        return coinManager.currencyArray[row]
     //    }
@@ -37,15 +38,15 @@ extension ViewController :UIPickerViewDelegate{
         let selectedCurrency=coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurrency)
     }
-    //       Function to set the Text Color of PickerView to White
     
+//Function to set the Text Color of PickerView to White
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         return NSAttributedString(string: coinManager.currencyArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
-    
 }
+
 //MARK: - UIPickerViewDataSource
-extension ViewController:UIPickerViewDataSource{
+extension ViewController:UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -57,12 +58,11 @@ extension ViewController:UIPickerViewDataSource{
 
 //MARK: - CoinManagerDelegate
 
-extension ViewController : CoinManagerDelegate{
+extension ViewController : CoinManagerDelegate {
     func didUpdatePrice(price: String, currency: String) {
         DispatchQueue.main.async {
             self.bitcoinLabel.text=price
             self.currencyLabel.text=currency
-            
         }
     }
     
@@ -74,6 +74,4 @@ extension ViewController : CoinManagerDelegate{
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    
 }

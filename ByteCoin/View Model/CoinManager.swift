@@ -13,14 +13,14 @@ struct CoinManager {
     let apiKey = "A5684375-E074-41CB-987A-656F9A9C3CBE"
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
-
-    func getCoinPrice(for currency :String){
+    
+    func getCoinPrice(for currency :String) {
         let urlString = "\(baseURL)/\(currency)?apikey=\(apiKey)"
         DispatchQueue.main.async {
             LoadingView.instance.show()
         }
         
-        if let url = URL(string: urlString){
+        if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, urlResponse, error) in
                 if error != nil {
@@ -30,17 +30,16 @@ struct CoinManager {
                     }
                     return
                 }
-                if let safeData = data{
+                if let safeData = data {
                     
                     if let bitcoinPrice = self.parseJSON(data: safeData){
-                    let priceString = String(format: "%.2f", bitcoinPrice)
+                        let priceString = String(format: "%.2f", bitcoinPrice)
                         DispatchQueue.main.async {
                             LoadingView.instance.hide()
                         }
-                    
-                    self.delegate?.didUpdatePrice(price: priceString, currency: currency)
+                        
+                        self.delegate?.didUpdatePrice(price: priceString, currency: currency)
                     }
-                    
                 }
             }
             task.resume()
@@ -49,15 +48,14 @@ struct CoinManager {
     
     func parseJSON(data : Data) -> Double? {
         let decoder = JSONDecoder()
-        do{
+        do {
             let decodedData = try decoder.decode(CoinData.self, from: data)
             let price = decodedData.rate
-//            print(price)
+            //            print(price)
             return price
-        }catch{
+        } catch {
             delegate?.didFailWithError(error: error)
             return nil
-            
         }
     }
 }

@@ -1,6 +1,6 @@
 
 import Foundation
-struct CoinData : Codable{
+struct CoinData : Codable {
     let rate : Double
 }
 
