@@ -18,18 +18,14 @@ class ViewController: UIViewController {
         currencyPicker.delegate=self
         coinManager.delegate=self
         animationView.isHidden = true
-        //        animationView.animation = Animation.named("8352-bitcoin")
-        //        animationView.contentMode = .scaleAspectFit
-        //        animationView.loopMode = .loop
-        //        animationView.animationSpeed = 0.8
-        //        animationView.play()
         animationView.backgroundColor = .black
-        // Do any additional setup after loading the view.
     }
 }
 
 //MARK: - UIPickerViewDelegate
 extension ViewController :UIPickerViewDelegate {
+    
+    //Function to return Text String as Title
     //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     //        return coinManager.currencyArray[row]
     //    }
@@ -39,7 +35,7 @@ extension ViewController :UIPickerViewDelegate {
         coinManager.getCoinPrice(for: selectedCurrency)
     }
     
-//Function to set the Text Color of PickerView to White
+    //Function to return Attributed Text String as Title
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         return NSAttributedString(string: coinManager.currencyArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
